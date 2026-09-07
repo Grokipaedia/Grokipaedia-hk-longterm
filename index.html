@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hong Kong, Long Term — visa pathways, sourced and honest</title>
+<style>
+  :root {
+    --paper: #EEF1EF;
+    --paper-dim: #E4E8E5;
+    --ink: #1B2430;
+    --ink-soft: #4A5560;
+    --rule: #C9CDC6;
+    --active: #2F6F4F;
+    --active-bg: #E4EEE8;
+    --uncertain: #A6650F;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  .wrap { max-width: 800px; margin: 0 auto; padding: 0 24px 96px; }
+  header.masthead {
+    padding: 40px 0 28px;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 40px;
+  }
+  .masthead-top {
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-size: 13px; color: var(--ink-soft); margin-bottom: 18px;
+  }
+  h1.wordmark { font-size: 20px; font-weight: 700; margin: 0; letter-spacing: -0.01em; }
+  .masthead p.tagline { margin: 0; color: var(--ink-soft); font-size: 15px; max-width: 56ch; }
+
+  .intro-line {
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.35;
+    margin: 0 0 44px;
+    max-width: 30ch;
+  }
+
+  section.register { margin-bottom: 56px; }
+  section.register > h3 {
+    font-size: 13px; color: var(--ink-soft); font-weight: 600;
+    margin: 0 0 16px; padding-bottom: 10px; border-bottom: 1px solid var(--rule);
+  }
+
+  details.visa {
+    border: 1px solid var(--rule); border-radius: 3px; margin-bottom: 12px;
+    background: white; overflow: hidden;
+  }
+  details.visa[open] { border-color: #B7BFB9; }
+  details.visa summary {
+    list-style: none; cursor: pointer; padding: 16px 18px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  details.visa summary::-webkit-details-marker { display: none; }
+  .summary-text { flex: 1; min-width: 0; }
+  .summary-text .vname { font-weight: 600; font-size: 15px; }
+  .summary-text .vcategory { color: var(--ink-soft); font-size: 13px; }
+  .path-tag {
+    font-size: 12px; padding: 3px 9px; border-radius: 3px;
+    background: var(--active-bg); color: var(--active); white-space: nowrap;
+  }
+  .chevron { color: var(--ink-soft); font-size: 12px; transition: transform 0.15s ease; }
+  details[open] .chevron { transform: rotate(90deg); }
+  .visa-body { padding: 4px 18px 20px; border-top: 1px solid var(--rule); }
+
+  dl.fields {
+    display: grid; grid-template-columns: 170px 1fr; gap: 12px 16px;
+    margin: 16px 0; font-size: 14px;
+  }
+  dl.fields dt { color: var(--ink-soft); }
+  dl.fields dd { margin: 0; }
+  dd.check-manually { color: var(--uncertain); }
+
+  .who-qualifies {
+    font-size: 14px; margin: 16px 0; padding: 14px;
+    background: var(--paper-dim); border-radius: 3px;
+  }
+  .who-qualifies strong { display: block; margin-bottom: 6px; font-size: 12px; color: var(--ink-soft); text-transform: none; }
+
+  .permit-link {
+    font-size: 13px; display: inline-block; margin-top: 4px; color: var(--ink);
+    border-bottom: 1px solid var(--ink-soft); text-decoration: none;
+  }
+  .permit-link:hover { border-color: var(--ink); }
+
+  .verified-tag { font-size: 12px; color: var(--ink-soft); margin-top: 12px; }
+
+  footer {
+    border-top: 1px solid var(--rule); padding-top: 20px;
+    font-size: 13px; color: var(--ink-soft);
+  }
+  footer a { color: var(--ink-soft); }
+  .report-cta {
+    display: inline-block; margin-top: 16px; font-size: 14px; padding: 9px 16px;
+    background: var(--ink); color: var(--paper); text-decoration: none; border-radius: 3px;
+  }
+  .report-cta:hover { background: #2C3846; }
+
+  @media (max-width: 520px) {
+    dl.fields { grid-template-columns: 1fr; gap: 3px 0; }
+    dl.fields dt { margin-top: 8px; }
+    .intro-line { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="masthead-top">
+      <h1 class="wordmark">Hong Kong, Long Term</h1>
+      <span id="generated-at"></span>
+    </div>
+    <p class="tagline">Not another cost-of-living blog post. What it actually takes, legally, to live in Hong Kong for the long haul — sourced from the Immigration Department, with gaps flagged rather than guessed.</p>
+  </header>
+
+  <p class="intro-line" id="intro-line">Loading pathways…</p>
+
+  <section class="register" id="register">
+    <h3>Residency pathways</h3>
+    <div id="visa-list"></div>
+  </section>
+
+  <footer>
+    <p>Every entry links to its primary source at immd.gov.hk. Where the public record doesn't state a figure — a fee, a timeline — this page says CHECK MANUALLY rather than guessing.</p>
+    <p><a href="https://github.com/Grokipaedia/hk-longterm">Source & data on GitHub</a> · <a href="https://github.com/Grokipaedia/hk-longterm/issues/new?template=visa-change.md">Report a policy change</a></p>
+  </footer>
+
+</div>
+
+<script>
+async function loadJson(paths) {
+  for (const p of paths) {
+    const res = await fetch(p);
+    if (res.ok) return res.json();
+  }
+  throw new Error('no json found at: ' + paths.join(', '));
+}
+
+async function loadData() {
+  const data = await loadJson(['visas.json', 'data/visas.json']);
+  render(data);
+}
+
+function fieldRow(label, value, checkManually) {
+  if (value === null || value === undefined || value === '') return '';
+  if (checkManually || (typeof value === 'string' && value.startsWith('CHECK MANUALLY'))) {
+    const detail = String(value).replace(/^CHECK MANUALLY( —)?\s*/, '').trim();
+    const text = detail ? `CHECK MANUALLY — ${detail}` : 'CHECK MANUALLY';
+    return `<dt>${label}</dt><dd class="check-manually">${text}</dd>`;
+  }
+  return `<dt>${label}</dt><dd>${value}</dd>`;
+}
+
+function render(data) {
+  document.getElementById('generated-at').textContent =
+    'Updated ' + new Date(data.generated_at).toLocaleString('en-US', { dateStyle: 'medium', timeStyle: 'short' });
+
+  const visas = data.visas || [];
+  document.getElementById('intro-line').textContent =
+    `${visas.length} residency pathways into Hong Kong, compared on what they actually require — not what a forum post says they require.`;
+
+  const listEl = document.getElementById('visa-list');
+  if (visas.length === 0) {
+    listEl.innerHTML = '<div>No pathways recorded yet.</div>';
+    return;
+  }
+  listEl.innerHTML = visas.map(visaCard).join('');
+}
+
+function visaCard(v) {
+  const feeApp = v.cost && v.cost.application_fee_hkd !== undefined
+    ? (typeof v.cost.application_fee_hkd === 'number' ? `HK$${v.cost.application_fee_hkd.toLocaleString()}` : v.cost.application_fee_hkd)
+    : null;
+  const feeIssue = v.cost ? v.cost.issuance_fee_hkd : null;
+
+  return `
+  <details class="visa">
+    <summary>
+      <span class="summary-text">
+        <span class="vname">${v.name}</span>
+        <span class="vcategory"> — ${v.category}</span>
+      </span>
+      ${v.path_to_pr ? `<span class="path-tag">${v.years_to_pr}-year path to PR</span>` : ''}
+      <span class="chevron">▸</span>
+    </summary>
+    <div class="visa-body">
+      <div class="who-qualifies">
+        <strong>Who qualifies</strong>
+        ${v.who_qualifies}
+      </div>
+      <dl class="fields">
+        ${fieldRow('Sponsorship required', v.sponsorship_required ? 'Yes' : 'No')}
+        ${fieldRow('Job offer required', v.job_offer_required ? 'Yes' : 'No')}
+        ${fieldRow('Application fee', feeApp)}
+        ${fieldRow('Issuance fee', feeIssue, typeof feeIssue === 'string' && feeIssue.startsWith('CHECK MANUALLY'))}
+        ${fieldRow('Processing time', v.processing_time)}
+        ${fieldRow('Initial stay', v.initial_stay)}
+        ${fieldRow('Renewal pattern', v.renewal_pattern)}
+        ${fieldRow('Dependants allowed', v.dependants_allowed ? 'Yes' : 'No')}
+        ${fieldRow('Path to PR', v.pr_notes)}
+      </dl>
+      <a class="permit-link" href="${v.source_url}" target="_blank" rel="noopener">View official source →</a>
+      <div class="verified-tag">Last verified against source: ${new Date(v.last_verified).toLocaleDateString('en-US', { dateStyle: 'medium' })}</div>
+    </div>
+  </details>`;
+}
+
+loadData().catch(err => {
+  document.getElementById('intro-line').textContent =
+    'Could not load data — check that visas.json is reachable from this page.';
+  console.error(err);
+});
+</script>
+</body>
+</html>

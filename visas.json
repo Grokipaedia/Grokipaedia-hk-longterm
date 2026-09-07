@@ -1,0 +1,101 @@
+{
+  "generated_at": "2026-09-06T07:00:00Z",
+  "visas": [
+    {
+      "id": "gep",
+      "name": "General Employment Policy (GEP)",
+      "short_name": "GEP",
+      "category": "Employment — sponsored",
+      "sponsorship_required": true,
+      "job_offer_required": true,
+      "who_qualifies": "Confirmed job offer from a Hong Kong employer; a degree-level qualification or equivalent relevant experience; market-rate salary; skills or experience not readily available locally. Employer must show the role could not reasonably be filled by a local candidate.",
+      "cost": {
+        "application_fee_hkd": 600,
+        "issuance_fee_hkd": "CHECK MANUALLY — tiered by stay length; refer to ImmD fee schedule",
+        "notes": "Application fee non-refundable regardless of outcome. Each accompanying dependant pays separately."
+      },
+      "processing_time": "Normally about 4 weeks for a complete, straightforward application; can extend to 12+ weeks if further documents are requested.",
+      "initial_stay": "Normally up to 36 months on employment conditions",
+      "renewal_pattern": "3+3+2 years is the typical extension pattern",
+      "path_to_pr": true,
+      "years_to_pr": 7,
+      "pr_notes": "Time on GEP counts toward the standard 7-year continuous ordinary residence requirement for permanent residency / Right of Abode.",
+      "dependants_allowed": true,
+      "source_url": "https://www.immd.gov.hk/eng/services/visas/GEP.html",
+      "last_verified": "2026-07-09",
+      "confidence": "confirmed"
+    },
+    {
+      "id": "qmas",
+      "name": "Quality Migrant Admission Scheme (QMAS)",
+      "short_name": "QMAS",
+      "category": "Talent — unsponsored, points-based",
+      "sponsorship_required": false,
+      "job_offer_required": false,
+      "who_qualifies": "At least 18 years old; able to financially support yourself and dependants; clean criminal and immigration record; generally a first degree from a recognized institution. Assessed under either the General Points Test or the Achievement-based Points Test — since November 2024, applicants must meet at least 6 of 12 prerequisite criteria under the reformed points system. No prior job offer needed. Not open to nationals of Afghanistan, Cuba, or North Korea.",
+      "cost": {
+        "application_fee_hkd": 600,
+        "issuance_fee_hkd": "CHECK MANUALLY — tiered by stay length; refer to ImmD fee schedule",
+        "notes": "Optional HKCAAVQ qualification assessment, where required, costs HK$3,860 per assessment (from 1 April 2026)."
+      },
+      "processing_time": "6 to 9 months via quarterly selection rounds — not a fixed timeline like GEP.",
+      "initial_stay": "Normally up to 36 months under the General Points Test; Achievement-based entrants can receive a longer initial stay, commonly cited as up to 8 years.",
+      "renewal_pattern": "3+3+2 years for General Points Test entrants; a 5-year extension is available instead if, after at least 2 years' stay, assessable salaries-tax income was at least HK$2 million in the prior tax year.",
+      "path_to_pr": true,
+      "years_to_pr": 7,
+      "pr_notes": "Time on QMAS counts toward the 7-year continuous ordinary residence requirement. The clock continues uninterrupted even if you later switch to a different visa type (e.g. TTPS, GEP entrepreneur route).",
+      "dependants_allowed": true,
+      "source_url": "https://www.immd.gov.hk/eng/faq/QMAS.html",
+      "last_verified": "2026-06-01",
+      "confidence": "confirmed"
+    },
+    {
+      "id": "dependant",
+      "name": "Entry for Residence as Dependants",
+      "short_name": "Dependant Visa",
+      "category": "Family — tied to a sponsor",
+      "sponsorship_required": true,
+      "job_offer_required": false,
+      "who_qualifies": "Spouse (legally married or recognized civil partner), or unmarried children under 18, of a sponsor who holds a valid Hong Kong visa (work, QMAS, student, IANG, etc.) or is a Hong Kong resident. Sponsor must demonstrate financial capacity to support the dependant. No criminal record. Elderly-parent sponsorship is only available where the sponsor is a Hong Kong permanent resident.",
+      "cost": {
+        "application_fee_hkd": "CHECK MANUALLY — sources vary (HK$230 cited by some guides; ImmD's own Specified Scheme fee table applies for sponsors on GEP/QMAS/TTPS)",
+        "issuance_fee_hkd": "CHECK MANUALLY — refer to ImmD fee schedule",
+        "notes": "Each dependant, including each accompanying child, is a separate application with its own fee."
+      },
+      "processing_time": "Typically 4 to 6 weeks, depending on document completeness.",
+      "initial_stay": "Matches the sponsor's visa validity and conditions",
+      "renewal_pattern": "Tied to sponsor's own extensions; dependants under a Specified Scheme sponsor may apply for extension within 3 months before expiry, other dependants within 4 weeks before expiry",
+      "path_to_pr": true,
+      "years_to_pr": 7,
+      "pr_notes": "Continuous ordinary residence as a dependant counts toward the same 7-year requirement, subject to meeting the general PR conditions.",
+      "dependants_allowed": false,
+      "source_url": "https://www.immd.gov.hk/eng/services/visas/residence_as_dependant.html",
+      "last_verified": "2026-08-05",
+      "confidence": "confirmed"
+    },
+    {
+      "id": "ttps",
+      "name": "Top Talent Pass Scheme (TTPS)",
+      "short_name": "TTPS",
+      "category": "Talent — unsponsored, no job offer needed",
+      "sponsorship_required": false,
+      "job_offer_required": false,
+      "who_qualifies": "Category A: annual income of HK$2.5 million or above (salary, allowances, stock options, or self-owned company profits) in the year immediately preceding application. Category B/C: a bachelor's degree or above from a university on the Immigration Department's Aggregate List of Eligible Universities (roughly 200 institutions worldwide, list updated annually). No prior job offer required for any category. Not open to nationals of Afghanistan, Cuba, or North Korea.",
+      "cost": {
+        "application_fee_hkd": "CHECK MANUALLY — sources conflict (HK$600 per ImmD's general Specified Scheme fee table cited by some guides; HK$230 cited by others)",
+        "issuance_fee_hkd": "CHECK MANUALLY — refer to ImmD fee schedule",
+        "notes": null
+      },
+      "processing_time": "Reference processing time is approximately 4 to 8 weeks; straightforward Category A applications with clear income verification are often faster.",
+      "initial_stay": "36 months (Category A); 24 months (Categories B and C)",
+      "renewal_pattern": "At renewal, applicants must show evidence of having taken steps to settle in Hong Kong — typically local employment or an active business.",
+      "path_to_pr": true,
+      "years_to_pr": 7,
+      "pr_notes": "Time on TTPS counts toward the standard 7-year continuous ordinary residence requirement, same as GEP and QMAS.",
+      "dependants_allowed": true,
+      "source_url": "https://www.immd.gov.hk/eng/services/visas/TTPS.html",
+      "last_verified": "2026-07-10",
+      "confidence": "confirmed"
+    }
+  ]
+}

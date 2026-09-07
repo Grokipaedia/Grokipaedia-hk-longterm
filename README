@@ -1,0 +1,47 @@
+# Hong Kong, Long Term
+
+What it actually takes, legally, to live in Hong Kong long-term — not
+another cost-of-living blog post.
+
+Live: https://grokipaedia.github.io/hk-longterm/
+
+## The pathway record
+
+Every entry in `visas.json` answers the questions that actually decide
+whether a route works for you:
+
+| | |
+|---|---|
+| **WHO QUALIFIES** | Eligibility as actually stated by the Immigration Department |
+| **SPONSORSHIP** | Whether you need an employer or can apply independently |
+| **COST** | Real application and issuance fees |
+| **TIMELINE** | Stated processing time |
+| **RENEWAL** | The extension pattern, and what triggers it |
+| **PATH TO PR** | Years to permanent residency, and whether time on this visa counts toward it |
+
+Where the public record doesn't state a figure — a fee, a timeline —
+this says `CHECK MANUALLY` rather than guessing. Hong Kong immigration
+policy changes faster than most; treat every entry's `last_verified`
+date as exactly that, a verification date, not a guarantee it's still
+current.
+
+## Contributing
+
+**Report a policy change:** [open an issue](../../issues/new?template=visa-change.md)
+with a link to the primary source (an immd.gov.hk page, a government
+notice, or an official circular).
+
+Every entry should trace to a primary source. If you can't find one,
+say so in the issue rather than filling in a guess.
+
+## Running locally
+
+Static site, no build step:
+
+```
+python3 -m http.server 8000
+```
+
+## License
+
+MIT — see [LICENSE](LICENSE).
